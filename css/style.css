@@ -20,6 +20,23 @@ body{
     gap: 10px;
 }
 
+header{
+    display: flex;
+    background-color: #0F766E;
+    align-items: center;
+    padding-left: 15px;
+    gap: 5px;
+}
+
+.nav-logo{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-logo:hover{
+    color: white;
+}
+
 nav {
     display: flex;
     flex-direction: row;
@@ -58,14 +75,13 @@ ul {
   background-color: #0F766E;
   display: none;
   flex-direction: column;
-  justify-content:space-evenly;
+  justify-content:space-between;
   width: 100%;
   gap: 20px;
   box-sizing: border-box;
   align-items: flex-start;
   position: absolute;
   top: 100%;
-  left:0;
 }
 
 nav ul li a{
@@ -169,10 +185,11 @@ button:hover{
     ul{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         align-items: center;
         position: static;
         margin: 0;
+        gap: 30px;
     }
 
     .hamburger-btn{
