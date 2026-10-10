@@ -140,7 +140,7 @@ nav ul li a{
     justify-content:space-evenly;
     color: white;
     position: absolute;
-    top: 0;
+    top: -70%;
     left: 151%;
     border: none;
 }
@@ -169,25 +169,32 @@ nav ul li a{
 
 @media (min-width:1024px) {
 
-    .nav-list{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        position: static;
-        margin: 0;
-        min-width: 1000px;
-        width: max-content;
-    }
-
-    nav ul li a{
-        display: inline-block;
-        width: max-content;
-        text-align: center;
+    header{
+        height: 10%;
+        gap: 10px;
     }
 
     .hamburger-btn{
         display: none;
+    }
+
+    nav{
+        height: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .nav-list{
+        display: flex;
+        flex-direction: row;
+        position: static;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: max-content;
+        column-gap: 30px;
     }
 
     ul li a:hover {
@@ -195,63 +202,33 @@ nav ul li a{
         color:#F59E0B;
     }
 
+    .theme-dropdown{
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown-menu{
+        top: 100%;
+        left: -35%;
+        border: none;
+        min-width: 155px;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align:center;
+        position: absolute;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .theme-dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+
     .search-button:hover{
         background-color:#F59E0B;
         border: 1.5px solid #F59E0B;
         color: white;
-    }
-
-    .theme-dropdown:hover .dropdown-menu{
-        display: flex;
-        cursor: pointer;
-    }
-
-    .theme-dropdown{
-        position: relative;
-        height: 100%;
-        align-content: center;
-    }
-
-    .theme-dropdown .dropdown-menu{
-        top: 95%;
-        left: -33%;
-        border: none;
-        min-width: 145px;
-        box-sizing: border-box;
-        text-align:left;
-        position: absolute;
-        border-radius: 0;
-        margin-top: -4px;
-    }
-    
-    .dropdown-menu li a{
-        white-space: normal;
-        padding: 0 5px 0 5px;
-    }
-
-    .dropdown-menu li{
-        text-align: center;
-        font-weight: normal;
-        margin: 0;
-    }
-
-    .theme-dropdown:hover .dropdown-menu{
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    .theme-dropdown .dropdown-menu li a:hover{
-        color: #F59E0B;
-    }
-
-    .theme-dropdown > a{
-        cursor: default;
-        padding-bottom: -15px;
-        margin-bottom: -15px;
-    }
-
-    .theme-dropdown:hover > a {
-        color: #F59E0B;
     }
 }
