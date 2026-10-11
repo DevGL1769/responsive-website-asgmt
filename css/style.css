@@ -28,6 +28,7 @@ footer{
     color: white;
     padding: 15px;
     gap: 0px;
+    
 }
 
 .social-media-links{
@@ -105,6 +106,8 @@ input#menu-toggle{
     width: max-content;
     height: max-content;
     background-color: #0F766E;
+    position: absolute;
+    z-index: 3;
 }
 
 .nav-list{
@@ -211,6 +214,70 @@ nav ul li a{
     color: #F59E0B;
 }
 
+.home-hero{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.home-hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the area without distortion */
+    z-index: 1;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2; /* Sits on top of both the video and the overlay */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: #ffffff;
+    padding: 25px;
+}
+
+.hero-action-button{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.hero-action-button button{
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
+    background-color: #F59E0B;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.hero-action-button button:focus{
+    outline: none;
+    border: none;
+}
+
+/* .trending-destinations{
+    position: relative;
+    height: 30%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.trending-destinations img{
+    position: absolute;
+    object-fit: cover;
+} */
+
 @media (min-width:1024px) {
 
     header{
@@ -276,6 +343,12 @@ nav ul li a{
         color: white;
     }
 
+    .search-button:active{
+        background-color: transparent;
+        outline: none;
+        border: 1px solid white;
+    }
+
     .social-media-links{
         gap: 20px;
     }
@@ -296,4 +369,8 @@ nav ul li a{
         font-size: medium;
     }
 
+    .home-hero{
+        width: 100%;
+        height: 50%;
+    }
 }
