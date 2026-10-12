@@ -413,6 +413,16 @@ nav ul li a{
     border: none;
 }
 
+.error-content{
+    padding: 25px;
+    background-color: #0F766E;
+    color: white;
+}
+
+.error-content a{
+    color:#F59E0B;
+}
+
 @media (min-width:1024px) {
 
     /* Ensure body acts as a flex container so main takes exact remaining height */
