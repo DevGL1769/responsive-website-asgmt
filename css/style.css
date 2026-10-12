@@ -221,7 +221,7 @@ nav ul li a{
 .home-hero{
     position: relative;
     width: 100%;
-    height: 70%;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -239,19 +239,30 @@ nav ul li a{
     position: relative;
     z-index: 2; /* Sits on top of both the video and the overlay */
     height: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
     color: #ffffff;
-    padding: 25px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.hero-content h1{
+    font-size: xx-large;
+}
+
+.hero-content h5{
+    font-size: medium;
 }
 
 .hero-action-button{
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 10px;
+    margin-top: 10px;
+    font-size: small;
+    width: max-content;
 }
 
 .hero-action-button button{
@@ -261,11 +272,87 @@ nav ul li a{
     color: white;
     padding: 10px;
     font-weight: bold;
+    text-align: left;
 }
 
 .hero-action-button button:focus{
     outline: none;
     border: none;
+}
+
+.trending-destinations{
+    width: 100%;
+    background-color: #0F766E;
+    color:white;
+}
+
+.trending-destinations .td-header{
+    padding: 15px;
+    padding-bottom: 0;
+}
+
+.destination-slider {
+    display: flex;             /* Aligns cards in a row side-by-side */
+    gap: 15px;               /* Adds spacing between cards */
+    overflow-x: auto;          /* Enables horizontal scrolling */
+    scroll-behavior: smooth;   /* Makes scrolling smooth */
+    padding: 15px;           /* Adds a little breathing room */
+    height: 250px;
+}
+
+.destination-card {
+    max-width: 150px;          /* Sets a fixed width for each card */
+    flex-shrink: 0;            /* CRITICAL: Stops the browser from squishing your cards */
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 220px;
+    background-color: #F59E0B;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-card h3,
+.destination-card a {
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: large;
+    padding-bottom: 0;
+}
+
+.destination-card h3{
+    margin:0;
+}
+
+.destination-card a{
+    font-size: smaller;
+    padding-top: 0;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.viewall{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-width: 150px;
+    color:white;
+}
+
+.viewall a{
+    text-align: center;
+    padding: 0;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 @media (min-width:1024px) {
@@ -295,7 +382,7 @@ nav ul li a{
         margin: 0;
         height: 100%;
         width: max-content;
-        column-gap: 30px;
+        column-gap: 25px;
     }
 
     ul li a:hover {
@@ -359,7 +446,65 @@ nav ul li a{
     }
 
     .home-hero{
+        position: relative;
         width: 100%;
-        height: 50%;
+        height: 250px;
+        overflow: hidden;
+    }
+
+    .hero-content{
+        position: relative;
+        z-index: 2; /* Sits on top of both the video and the overlay */
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        padding: 30px;
+        justify-content: center;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero-content h5{
+        font-size: 20px;
+    }
+
+    .hero-action-button{
+        font-size: medium;
+        gap: 15px;
+    }
+
+    .trending-destinations .td-header{
+        padding: 30px;
+        padding-bottom: 0;
+    }
+
+    .destination-slider {
+        display: flex;
+        padding: 30px;
+        padding-top: 15px;
+        height: 280px;
+        justify-content: space-between;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        overflow-x: auto;
+        gap: 20px;
+    }
+
+    .destination-card {
+        max-width: 199px;          /* Sets a fixed width for each card */
+        flex-shrink: 0;            /* CRITICAL: Stops the browser from squishing your cards */
+        border-radius: 10px;
+        overflow: hidden;
+        max-height: 220px;
+        background-color: #F59E0B;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .viewall{
+        min-width: 199px;
     }
 }
