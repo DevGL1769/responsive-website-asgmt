@@ -480,6 +480,7 @@ nav ul li a{
     .trending-destinations .td-header{
         padding: 30px;
         padding-bottom: 0;
+        padding-top: 20px;
     }
 
     .destination-slider {
