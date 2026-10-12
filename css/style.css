@@ -27,6 +27,8 @@ header {
 
 /* Main content takes up all available space to push footer down */
 main {
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
@@ -221,7 +223,6 @@ nav ul li a{
 .home-hero{
     position: relative;
     width: 100%;
-    height: 300px;
     overflow: hidden;
 }
 
@@ -355,11 +356,78 @@ nav ul li a{
     text-decoration: none;
 }
 
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#0F766E;
+    padding: 25px;
+    color: white;
+    gap: 25px;
+    height: 100%;
+}
+
+.contact-cards{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 20px;
+}
+
+.telephone-card,
+.mail-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #F59E0B;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.telephone-card a,
+.mail-card a,
+.map-container a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.map-container{
+    background-color: #F59E0B;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.map-card{
+    width: 100%;
+}
+
+.map-iframe{
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 @media (min-width:1024px) {
 
-    header{
-        height: 10%;
-        gap: 10px;
+    /* Ensure body acts as a flex container so main takes exact remaining height */
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden; /* Prevents vertical scrollbar on screen */
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        flex: 1; /* Automatically expands to fill space between header and footer */
+        overflow: hidden;
     }
 
     .hamburger-btn{
@@ -370,6 +438,7 @@ nav ul li a{
         height: 100%;
         padding-top: 0;
         padding-bottom: 0;
+        padding-left: 10px;
     }
 
     .nav-list{
@@ -398,6 +467,7 @@ nav ul li a{
     }
 
     .dropdown-menu{
+        display:none;
         top: 100%;
         left: -35%;
         border: none;
@@ -448,14 +518,13 @@ nav ul li a{
     .home-hero{
         position: relative;
         width: 100%;
-        height: 250px;
+        height: 300px;
         overflow: hidden;
     }
 
     .hero-content{
         position: relative;
         z-index: 2; /* Sits on top of both the video and the overlay */
-        height: 100%;
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -475,6 +544,12 @@ nav ul li a{
     .hero-action-button{
         font-size: medium;
         gap: 15px;
+    }
+
+    .trending-destinations{
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
     }
 
     .trending-destinations .td-header{
@@ -507,5 +582,12 @@ nav ul li a{
 
     .viewall{
         min-width: 199px;
+    }
+
+    .contact-section{
+        margin: 0;
+        width: 100%;
+        height: 598px;
+        overflow: hidden;
     }
 }
