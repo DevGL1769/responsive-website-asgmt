@@ -81,7 +81,7 @@ nav {
 .nav-logo{
     color: white;
     text-decoration: none;
-    padding-right: 10px;
+    padding-right: 15px;
 }
 
 .nav-logo:hover{
@@ -108,7 +108,7 @@ input#menu-toggle{
     padding: 0;
 }
 
-#menu-toggle:checked ~ .nav-list {
+.hamburger-btn #menu-toggle:checked ~ .nav-list {
     display: flex;
     padding: 15px;
     top: 100%;
@@ -144,18 +144,19 @@ nav ul li a{
 .nav-search-box{
     display: flex;
     justify-content: flex-end;
-    gap: 5px;
+    gap: 8px;
+    width: 200px;
 }
 
-#search-input{
-    width: 50%;
+.nav-search-box #search-input{
+    width: 60%;
     border: none;
     border-radius: 5px;
     max-height: 40px;
     padding: 15px;
 }
 
-#search-input:focus{
+.nav-search-box #search-input:focus{
     outline: none;
 }
 
@@ -456,12 +457,15 @@ nav ul li a{
     margin-bottom: 0;
 }
 
-.contact-form .message-textarea{
+.message-textarea{
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.contact-form .message-textarea{
     width: 100%;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     border-radius: 5px;
 }
 
@@ -563,6 +567,7 @@ nav ul li a{
     }
 
     nav{
+        justify-content: space-around;
         height: 100%;
         padding-top: 0;
         padding-bottom: 0;
@@ -573,7 +578,7 @@ nav ul li a{
         display: flex;
         flex-direction: row;
         position: static;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         padding: 0;
         margin: 0;
@@ -601,6 +606,7 @@ nav ul li a{
         border: none;
         min-width: 155px;
         padding: 10px;
+        padding-top: 30px;
         text-align:center;
         position: absolute;
         border-radius: 0;
@@ -723,6 +729,12 @@ nav ul li a{
         flex-direction: row;
     }
 
+    .telephone-card,
+    .mail-card,
+    .map-container{
+        justify-content: flex-start;
+    }
+
     .about-section{
         background-color: #0F766E;
         padding: 25px;
@@ -777,12 +789,23 @@ nav ul li a{
         border-radius: 5px;
     }
 
-    .contact-form .message-textarea{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        width: 20%;
-        padding-bottom: 5px;
+    .contact-form .message-textarea {
+        padding-bottom: 15px;
+    }
+
+    .contact-form .message-textarea textarea {
+        width: 20%;        
+        min-width: 200px;          
+        height: 70px;      
+        max-width: 100%; 
+        resize: both;      
         border-radius: 5px;
+        padding: 8px;      
+        border: none;
+    }
+
+    .map-container a{
+        margin-top: 0;
+        margin-bottom: 10px;
     }
 }
