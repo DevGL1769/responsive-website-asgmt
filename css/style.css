@@ -81,7 +81,8 @@ nav {
 .nav-logo{
     color: white;
     text-decoration: none;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .nav-logo:hover{
@@ -536,6 +537,81 @@ nav ul li a{
     border-radius: 10px;
 }
 
+.travel-guide-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.travel-guide-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    z-index: 2;
+}
+
+.travel-guide-header .sub-header{
+    display: flex;
+    gap: 35px;
+    padding-left: 20px;
+    padding-top: 5px;
+    margin: 0;
+}
+
+.tguide-content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tguide-table-content{
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.tguide-table-content nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding:20px;
+    background-color: #F59E0B;
+}
+
+.tguide-table-content nav:hover{
+    color: white;
+}
+
+.content-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding-left: 0;
+    gap: 10px;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.content-list a:hover{
+    color:blue;
+}
+
+.tguide-main-content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+}
+
+.tguide-main-content section {
+    scroll-margin-top: 220px; /* Adjust height as needed to clear any headers */
+}
+
 @media (min-width:1024px) {
 
     /* Ensure body acts as a flex container so main takes exact remaining height */
@@ -808,4 +884,60 @@ nav ul li a{
         margin-top: 0;
         margin-bottom: 10px;
     }
+
+    .travel-guide-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .travel-guide-header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px;
+        z-index: 2;
+    }
+
+    .travel-guide-header .sub-header{
+        display: flex;
+        gap: 35px;
+        padding-left: 20px;
+        padding-top: 5px;
+        margin: 0;
+    }
+
+    .tguide-content{
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+    }
+
+    .tguide-table-content{
+        width: 150px;
+        position: sticky;
+        top: 120px;
+        background-color: #F59E0B;
+    }
+
+    .tguide-table-content nav{
+        padding-top: 25px;
+        height: 100%;
+    }
+
+    .content-list{
+        gap: 20px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .tguide-main-content{
+        padding: 25px;
+        gap: 40px;
+    }
+
+    .tguide-main-content section {
+        scroll-margin-top: 100px; /* Adjust height as needed to clear any headers */
+    }
+
+    
 }
