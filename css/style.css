@@ -552,6 +552,7 @@ nav ul li a{
 
 .travel-guide-header .sub-header{
     display: flex;
+    align-items: center;
     gap: 35px;
     padding-left: 20px;
     padding-top: 5px;
@@ -610,6 +611,75 @@ nav ul li a{
 
 .tguide-main-content section {
     scroll-margin-top: 220px; /* Adjust height as needed to clear any headers */
+}
+
+/* 1. Main Section Wrapper */
+.gallery-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    background-color: #F59E0B;
+    width: 100%;
+}
+
+.gallery-section h1{
+    font-size: xx-large;
+    padding-bottom: 10px;
+    color: white;
+}
+
+/* 2. Flex Container (The Engine) */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* 3. Default Figure Style */
+.gallery-container figure {
+    flex: 1 1 33.33%; /* Default 3-column fallback */
+    margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* 4. Manual Row Wrapping Custom Widths (Staggered Effect) */
+/* Row 1: Ellora (55%) + Goa (40%) = fits inside 100% width */
+.gallery-container figure:nth-child(1) {
+    flex: 1 1 60%;
+}
+.gallery-container figure:nth-child(2) {
+    flex: 1 1 35%;
+}
+
+/* Row 2: Kashmir (30%) + Kerala (65%) = wraps automatically */
+.gallery-container figure:nth-child(3) {
+    flex: 1 1 25%;
+}
+.gallery-container figure:nth-child(4) {
+    flex: 1 1 40%;
+}
+.gallery-container figure:nth-child(5) {
+    flex: 1 1 30%;
+}
+
+/* 5. Image & Caption Styling */
+.gallery-container figure img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-container figure figcaption {
+    padding: 3px;
+    text-align: center;
+    color: white;
+    background-color: #0F766E;
 }
 
 @media (min-width:1024px) {
@@ -907,6 +977,10 @@ nav ul li a{
         margin: 0;
     }
 
+    .travel-guide-header .sub-header p{
+        margin: 0;
+    }
+
     /* 2. Side-by-side row container */
     .tguide-content {
         display: flex;
@@ -944,5 +1018,75 @@ nav ul li a{
 
     .tguide-main-content section {
         scroll-margin-top: 120px; /* Clears fixed header seamlessly when anchor links are clicked */
+    }
+
+    /* 1. Main Section Wrapper */
+    .gallery-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        background-color: #F59E0B;
+        width: 100%;
+    }
+
+    .gallery-section h1{
+        font-size: 36px;
+        padding-bottom: 30px;
+        color: white;
+    }
+
+    /* 2. Flex Container (The Engine) */
+    .gallery-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        max-width: 1200px;
+        width: 90%;
+    }
+
+    /* 3. Default Figure Style */
+    .gallery-container figure {
+        flex: 1 1 33.33%; /* Default 3-column fallback */
+        margin: 0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    /* 4. Manual Row Wrapping Custom Widths (Staggered Effect) */
+    /* Row 1: fits inside 100% width */
+    .gallery-container figure:nth-child(1) {
+        flex: 1 1 60%;
+    }
+    .gallery-container figure:nth-child(2) {
+        flex: 1 1 35%;
+    }
+
+    /* Row 2: wraps automatically */
+    .gallery-container figure:nth-child(3) {
+        flex: 1 1 25%;
+    }
+    .gallery-container figure:nth-child(4) {
+        flex: 1 1 40%;
+    }
+    .gallery-container figure:nth-child(5) {
+        flex: 1 1 30%;
+    }
+
+    /* Row 3: wraps automatically */
+    .gallery-container figure:nth-child(6) {
+        flex: 1 1 35%;
+    }
+    .gallery-container figure:nth-child(7) {
+        flex: 1 1 60%;
+    }
+
+    /* 5. Image & Caption Styling */
+    .gallery-container figure img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
     }
 }
