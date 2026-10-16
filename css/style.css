@@ -647,26 +647,6 @@ nav ul li a{
     overflow: hidden;
 }
 
-/* 4. Manual Row Wrapping Custom Widths (Staggered Effect) */
-/* Row 1: Ellora (55%) + Goa (40%) = fits inside 100% width */
-.gallery-container figure:nth-child(1) {
-    flex: 1 1 60%;
-}
-.gallery-container figure:nth-child(2) {
-    flex: 1 1 35%;
-}
-
-/* Row 2: Kashmir (30%) + Kerala (65%) = wraps automatically */
-.gallery-container figure:nth-child(3) {
-    flex: 1 1 25%;
-}
-.gallery-container figure:nth-child(4) {
-    flex: 1 1 40%;
-}
-.gallery-container figure:nth-child(5) {
-    flex: 1 1 30%;
-}
-
 /* 5. Image & Caption Styling */
 .gallery-container figure img {
     width: 100%;
@@ -847,11 +827,11 @@ nav ul li a{
         scroll-behavior: smooth;
         scrollbar-width: none;
         overflow-x: auto;
-        gap: 20px;
+        gap: 15px;
     }
 
     .destination-card {
-        max-width: 199px;          /* Sets a fixed width for each card */
+        max-width: 225px;          /* Sets a fixed width for each card */
         flex-shrink: 0;            /* CRITICAL: Stops the browser from squishing your cards */
         border-radius: 10px;
         overflow: hidden;
@@ -861,7 +841,11 @@ nav ul li a{
     }
 
     .viewall{
-        min-width: 199px;
+        min-width: 225px;
+    }
+
+    .viewall a:hover{
+        color: blue;
     }
 
     .contact-section{

@@ -57,8 +57,101 @@
         </nav>
     </header>
 
-    <main>
-        
+    <main class="booking-page">
+        <form action="#">
+            <fieldset>
+                <legend>Traveller's Personal Info</legend>
+
+                <label for="name">Traveller's Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" min="1" max="120" required>
+
+                <label for="gender">Gender:</label>
+                <span>
+                    <input type="radio" id="gender-male" name="gender" value="Male">
+                    <label for="gender-male">M</label>
+                </span>
+
+                <span>
+                    <input type="radio" id="gender-female" name="gender" value="Female">
+                    <label for="gender-female">F</label>
+                </span>
+
+                <label for="mobile">Mobile No.</label>
+                <input type="tel" id="mobile" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address">
+            </fieldset>
+
+            <fieldset>
+                <legend>Trip Details</legend>
+                <label for="from">Source:</label>
+                <input type="text" id="from" required>
+
+                <label for="destination">Destination:</label>
+                <select id="destination" required>
+                    <option value="">--Select Destination--</option>
+                    <option value="Kashmir">Kashmir</option>
+                    <option value="Agra">Agra</option>
+                    <option value="Amritsar">Amritsar</option>
+                    <option value="Udaipur">Udaipur</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Kerela">Kerela</option>
+
+                </select>
+
+                <label for="travel-date">Travel Date:</label>
+                <input type="date" id="travel-date" required>
+
+                <label for="return-date">Return Date:</label>
+                <input type="date" id="return-date" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Travel Style</legend>
+                <p>Select your preferred travel style:</p>
+
+                <div>
+                    <input type="radio" id="style-adventure" name="travel-style" value="style-adventure" checked>
+                    <label for="style-adventure">Adventure</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="style-cultural" name="travel-style" value="style-cultural">
+                    <label for="style-cultural">Cultural</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="style-relaxation" name="travel-style" value="style-relaxation">
+                    <label for="style-adventure">Relaxation</label>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Details/Special Requests</legend>
+
+                <label for="traveller-count">No. of Travellers:</label>
+                <input type="number" id="traveller-count" min="1" max="10" value="1" required>
+
+                <label for="requests">Special Requests:</label>
+                <textarea id="requests" rows="4" placeholder="Any dietary requirements or special accomodation?"></textarea>
+
+                <aside class="summary-panel">
+                    <h3>Booking Summary</h3>
+                    <p>Review your details before submitting your request.</p>
+                </aside>
+
+                <button type="submit">Book Tickets</button>
+            </fieldset>
+        </form>
     </main>
 
     <footer>
