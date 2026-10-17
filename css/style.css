@@ -662,6 +662,93 @@ nav ul li a{
     background-color: #0F766E;
 }
 
+.booking-page{
+    padding: 25px;
+    background-color: #F59E0B;
+    color: white;
+}
+
+.booking-page form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.booking-page fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.booking-page fieldset label{
+    font-weight: bold;
+    margin: 0;
+}
+
+.booking-page fieldset select{
+    outline: none;
+    border-radius: 5px;
+    height: 34px;
+}
+
+.booking-page fieldset p{
+    font-weight: bold;
+}
+
+.booking-page fieldset textarea{
+    display: flex;
+    margin: 0;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    height: 50px;
+}
+
+.booking-page fieldset input{
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.booking-page fieldset input:focus{
+    outline: none;
+}
+
+.booking-page fieldset .gender-selection{
+    display: flex;
+    align-items: flex-end;
+    padding-top: 10px;
+    gap: 15px;
+}
+
+.booking-page fieldset legend{
+    font-weight: bold;
+    background-color: #0F766E;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.booking-page form .submit-btn{
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #0F766E;
+    color: white;
+    border: 1px solid white;
+}
+
+.summary-panel {
+    background-color: #0F766E;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+
 @media (min-width:1024px) {
 
     /* Ensure body acts as a flex container so main takes exact remaining height */
@@ -1073,4 +1160,23 @@ nav ul li a{
         object-fit: cover;
         display: block;
     }
+
+    .booking-page form{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+        padding: 40px;
+    }
+
+    .booking-page form fieldset {
+        flex: 0 0 calc(50% - 20px); /* Added spaces around the minus sign! */
+    }
+
+    .booking-page form .submit-btn {
+        flex: 0 0 100%;
+        margin: 0;
+        height: 50px;
+        align-items: center;
+    }    
+
 }
